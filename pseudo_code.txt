@@ -1,0 +1,24 @@
+Creating_socket(UDP, HOST_PORT)
+socket_initializaiton_message() // exchange ports and address
+
+
+//create a new thread for listening
+thread_listen()
+
+//listen on a daemon thread
+socket_wait_for_connection()
+
+
+//receive/listen on the host port
+socket_receive_on_port(PORT)
+Deserialize(packet)
+if(EVENT)
+    raise_alert()
+
+
+//create a new thread for sending
+thread_send()
+//Serialize data before sending
+Serialize(packet)
+//send packet to destination address and port using UDP socket  
+socket_send(packet, DESTINATION_PORT, DESTINATION_ADDRESS)
